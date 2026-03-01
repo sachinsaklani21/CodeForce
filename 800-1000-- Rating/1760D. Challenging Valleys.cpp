@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+void solve()
+{
+    int n;
+    cin>>n;
+    vector<long long> arr(n);
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    bool upphill=false;
+    bool possible=true;
+    for(int i=0;i<n-1;i++)
+    {
+        if(arr[i]>arr[i+1])
+        {
+            if(upphill)
+            {
+               possible =false;
+            }
+        }
+        else if(arr[i]<arr[i+1])
+        {
+            upphill=true;
+        }
+    }
+    if(possible)cout<<"YES"<<"\n";
+    else cout<<"NO"<<"\n";
+}
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int t;
+    cin>>t;
+    while(t--)solve();
+    return 0;
+}
