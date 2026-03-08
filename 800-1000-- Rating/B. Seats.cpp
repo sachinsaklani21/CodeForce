@@ -31,8 +31,8 @@ void solve()
             ans++; 
         }
     }
-
-    cout << ans << "\n";
+    
+        cout << ans << "\n";
 }
 
 int main()
